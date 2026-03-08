@@ -9,9 +9,5 @@ export async function fetchChallenges() {
   }
 
   const data = await response.json();
-
-  //console.loggar bara för eran skull om det är något ni vill se
-  console.log(data.challenges);
-  console.log(data);
   return data.challenges;
 }

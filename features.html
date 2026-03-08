@@ -13,8 +13,8 @@
     <meta property="og:site_name" content="ESC Hacker Escape Rooms" />
     <meta property="og:locale" content="en_US" />
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='challenges.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='booking.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./CSS/challenges.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./CSS/booking.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
@@ -43,13 +43,14 @@
     </div>
 
     <div class="filterbutton">
-        <button class="filterBtn" onclick="document.querySelector('link').href='filter.css';">Filter challenges</button>
+        <button class="filterBtn" onclick="document.querySelector('link').href='./CSS/filter.css';">Filter
+            challenges</button>
     </div>
 
     <div class="containerfilter">
         <h2>Filter challenges
-            <em><img src="close-button.png" class="close"
-                    onclick="document.querySelector('link').href='challenges.css';"></em>
+            <em><img src="/img/close-button.png" class="close"
+                    onclick="document.querySelector('link').href='./CSS/challenges.css';"></em>
         </h2>
 
         <section class="filter">
@@ -147,9 +148,9 @@
         </nav>
     </footer>
 
-    <script src="main.js" type="module"></script>
-    <script src="stars.js" type="module"></script>
-    <script src="booking.js" type="module"></script>
+    <script src="/JS/main.js" type="module"></script>
+    <script src="/JS/stars.js" type="module"></script>
+    <script src="/JS/booking.js" type="module"></script>
 </body>
 
 </html>
