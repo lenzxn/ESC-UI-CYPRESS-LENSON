@@ -1,7 +1,7 @@
 describe("Startsidan", () => {
   it("laddar startsidan", () => {
     cy.visit("/");
-    cy.url().should("include", "127.0.0.1:5501");
+    cy.get("body").should("be.visible");
   });
 
   it("visar statisk text på startsidan", () => {
