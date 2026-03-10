@@ -5,7 +5,7 @@ export async function fetchChallenges() {
 
   if (!response.ok) {
     const errorText = await response.text();
-    const error = new Error(errorText || "Network response failed");
+    throw new Error(errorText || "Network response failed");
   }
 
   const data = await response.json();
