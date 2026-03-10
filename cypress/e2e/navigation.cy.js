@@ -1,7 +1,9 @@
 describe("Navigation", () => {
-  it("kan navigera från startsidan till challenges och tillbaka", () => {
+  beforeEach(() => {
     cy.visit("/");
+  });
 
+  it("kan navigera från startsidan till challenges och tillbaka", () => {
     cy.contains("See all challenges").click();
 
     cy.url().should("include", "features");
