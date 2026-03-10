@@ -295,7 +295,7 @@ function applyAllFilters() {
   if (activeTags.length > 0) {
     filtered = filtered.filter((challenge) => {
       const labels = (challenge.labels || []).map((l) =>
-        String(l).toLowerCase()
+        String(l).toLowerCase(),
       );
       return activeTags.every((tag) => labels.includes(tag));
     });
@@ -327,17 +327,28 @@ function applyAllFilters() {
   displayCards(filtered);
 
   // GLOBAL "No match found" – använd samma som i keyword-sök
+
   if (filtered.length === 0) {
     if (infomessage && infoText) {
       infomessage.style.display = "block";
       infoText.textContent = "No match found";
     }
-
-    if (noMatchMessage) noMatchMessage.style.display = "block";
   } else {
-    if (infomessage) infomessage.style.display = "none";
-    if (noMatchMessage) noMatchMessage.style.display = "none";
+    if (infomessage) {
+      infomessage.style.display = "none";
+    }
   }
+  // if (filtered.length === 0) {
+  //   if (infomessage && infoText) {
+  //     infomessage.style.display = "block";
+  //     infoText.textContent = "No match found";
+  //   }
+
+  //   if (noMatchMessage) noMatchMessage.style.display = "block";
+  // } else {
+  //   if (infomessage) infomessage.style.display = "none";
+  //   if (noMatchMessage) noMatchMessage.style.display = "none";
+  // }
 }
 
 export function updateRatingFilter(min, max) {
