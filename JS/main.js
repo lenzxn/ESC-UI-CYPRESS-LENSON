@@ -258,7 +258,11 @@ tagIds.forEach((tagId) => {
 });
 
 // Function för att filtrera challenges baserad på keyword
-infoText.textContent = "";
+
+if (infoText) {
+  infoText.textContent = "";
+}
+
 if (searchinput) {
   searchinput.addEventListener("keyup", (e) => {
     searchKeyword = e.target.value.trim().toLowerCase();
@@ -338,17 +342,6 @@ function applyAllFilters() {
       infomessage.style.display = "none";
     }
   }
-  // if (filtered.length === 0) {
-  //   if (infomessage && infoText) {
-  //     infomessage.style.display = "block";
-  //     infoText.textContent = "No match found";
-  //   }
-
-  //   if (noMatchMessage) noMatchMessage.style.display = "block";
-  // } else {
-  //   if (infomessage) infomessage.style.display = "none";
-  //   if (noMatchMessage) noMatchMessage.style.display = "none";
-  // }
 }
 
 export function updateRatingFilter(min, max) {
